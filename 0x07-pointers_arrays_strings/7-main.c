@@ -1,0 +1,31 @@
+#include "main.h"
+#include <stdio.h>  /* only for our own test prints, not needed by the function */
+
+/**
+ * main - Test the print_diagsums function
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    int c3[3][3] = {
+        {0, 1, 5},
+        {10, 11, 12},
+        {1000, 101, 102}
+    };
+    int c5[5][5] = {
+        {0, 1, 5, 12124, 1234},
+        {10, 11, 12, 123521, 12512},
+        {1000, 101, 102, 12545, 214543435},
+        {100, 1012451, 11102, 12545, 214543435},
+        {10, 12401, 10452, 11542545, 1214543435}
+    };
+
+    printf("Testing 3x3 matrix:\n");
+    print_diagsums((int *)c3, 3);
+
+    printf("\nTesting 5x5 matrix:\n");
+    print_diagsums((int *)c5, 5);
+
+    return (0);
+}
