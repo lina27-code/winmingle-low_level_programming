@@ -1,2 +1,10 @@
 #!/bin/bash
-gcc -c $CFILE
+
+/**
+* Author: Otu Faith Kokuwa
+* Program: WinMingle Community C Training
+* Description: This is a script that compiles a C file but does not link.
+*/
+
+/* C file name is stored in the variable */
+ gcc -c "$CFILE" -o "${CFILE%.c}.o"

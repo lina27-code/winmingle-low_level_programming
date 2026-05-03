@@ -1,2 +1,10 @@
 #!/bin/bash
-gcc $CFILE -o cisfun
+
+/**
+* Author: Otu Faith Kokuwa
+* Program: WinMingle Community C Training
+*  Description: This script compiles a C file and creates an executable named cisfun. 
+*/
+
+/* C file name is stored in the variable */
+ gcc $CFILE -o cisfun

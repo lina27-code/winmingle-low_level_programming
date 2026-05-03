@@ -1,2 +1,11 @@
 #!/bin/bash
-gcc -E $CFILE -o c
+
+/**
+* Author: Otu Faith Kokuwa
+* Program: WinMingle Community C Training
+* Description: This script runs a C file through the preprocessor and saves the result into another file.
+*/
+
+/* C file name is stored in the variable below */
+
+ gcc -E $CFILE -o c

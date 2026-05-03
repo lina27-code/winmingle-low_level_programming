@@ -1,2 +1,10 @@
 #!/bin/bash
-gcc -S $CFILE
+
+/**
+* Author: Otu Faith Kokuwa
+* Program: WinMingle Community C Training
+* Description: This script generates the assembly code of a C code and saves it in an output file.
+*/
+
+/* C file name is stored in the variable */
+ gcc -S "$CFILE" -o "${CFILE%.c}.s"

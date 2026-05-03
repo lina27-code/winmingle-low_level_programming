@@ -1,2 +1,9 @@
 #!/bin/bash
-gcc -S -masm=intel $CFILE
+ 
+/**
+* Author: Otu Faith Kokuwa
+* Program: WinMingle Community C Training
+* Description: This script generates the assembly code (Intel syntax) of a C code and saves it to an output file. 
+*/
+
+ gcc -S -masm=intel "$CFILE" -o "${CFILE%.c}.s"
