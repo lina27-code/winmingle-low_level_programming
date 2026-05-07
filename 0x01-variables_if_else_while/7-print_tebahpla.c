@@ -3,7 +3,7 @@
 /**
  * Author: Otu Faith Kokuwa
  * Program: WinMingle Community C Training
- * Description: Prints the lowercase alphabet in reverse
+ * Description: Prints the lowercase alphabet in reverse order
  */
 
 int main(void)

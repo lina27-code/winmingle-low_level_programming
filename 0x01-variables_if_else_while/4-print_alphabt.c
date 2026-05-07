@@ -3,7 +3,7 @@
 /**
  * Author: Otu Faith Kokuwa
  * Program: WinMingle Community C Training
- * Description: Prints lowercase alphabet except e and q
+ * Description: Prints lowercase alphabet except q and e
  */
 
 int main(void)
