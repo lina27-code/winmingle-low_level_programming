@@ -6,12 +6,20 @@
  *
  * Return: 1 if lowercase, 0 otherwise
  */
+
 int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
+    char i;
+    int lower = 0;
 
-	return (0);
+    for (i = 'a'; i <= 'z'; i++)
+   {
+     if (i == c)
+{
+    lower = 1;
+}
+
+}
+
+	return (lower);
 }

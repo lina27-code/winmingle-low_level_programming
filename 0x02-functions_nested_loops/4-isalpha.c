@@ -7,12 +7,20 @@
  * Return: 1 if letter, 0 otherwise
  */
 int _isalpha(int c)
-{
-	if ((c >= 'a' && c <= 'z') ||
-	    (c >= 'A' && c <= 'Z'))
-	{
-		return (1);
-	}
+{  
+    char lower, upper;
+    int letter = 0;
+	
+  for (lower = 'a'; lower <= 'z'; lower++)
+    {
+  for (upper = 'A'; upper <= 'Z'; upper++)
+          {
+            if (lower == c || upper == c)
+               {
+                    letter = 1;
+               }
+          }
+    }
+    return (letter);
 
-	return (0);
 }
