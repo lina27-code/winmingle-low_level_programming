@@ -1,28 +1,40 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints first 50 Fibonacci numbers
+ * print_ulong - prints an unsigned long using _putchar
+ * @n: the number to print
+ */
+static void print_ulong(unsigned long n)
+{
+    if (n >= 10)
+        print_ulong(n / 10);
+    _putchar((n % 10) + '0');
+}
+
+/**
+ * main - prints the first 50 Fibonacci numbers starting with 1 and 2
+ *
  * Return: Always 0
  */
 int main(void)
 {
-    unsigned long int a = 1;
-    unsigned long int b = 2;
-    unsigned long int next;
-    int count;
+    unsigned long a = 1, b = 2, c;
+    int i;
 
-    printf("%lu, %lu", a, b);
+    print_ulong(a);
+    _putchar(',');
+    _putchar(' ');
+    print_ulong(b);
 
-    for (count = 3; count <= 50; count++)
+    for (i = 0; i < 48; i++)
     {
-        next = a + b;
-        printf(", %lu", next);
-
+        c = a + b;
+        _putchar(',');
+        _putchar(' ');
+        print_ulong(c);
         a = b;
-        b = next;
+        b = c;
     }
-
-    printf("\n");
-
+    _putchar('\n');
     return (0);
 }

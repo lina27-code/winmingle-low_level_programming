@@ -1,29 +1,35 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints sum of even Fibonacci numbers not exceeding 4,000,000
+ * print_ulong - prints an unsigned long using _putchar
+ * @n: the number to print
+ */
+static void print_ulong(unsigned long n)
+{
+    if (n >= 10)
+        print_ulong(n / 10);
+    _putchar((n % 10) + '0');
+}
+
+/**
+ * main - prints the sum of even Fibonacci terms below 4,000,000
+ *
  * Return: Always 0
  */
 int main(void)
 {
-    unsigned long int a = 1;
-    unsigned long int b = 2;
-    unsigned long int next;
-    unsigned long int sum = 0;
+    unsigned long a = 1, b = 2, c;
+    unsigned long sum = 0;
 
     while (b <= 4000000)
     {
         if (b % 2 == 0)
-        {
             sum += b;
-        }
-
-        next = a + b;
+        c = a + b;
         a = b;
-        b = next;
+        b = c;
     }
-
-    printf("%lu\n", sum);
-
+    print_ulong(sum);
+    _putchar('\n');
     return (0);
 }
